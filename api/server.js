@@ -3,6 +3,13 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 const port = process.env.PORT || 5000
 
+// Couleur dans la console
+const colors = require('colors')
+
+// Connexion à MongoDB
+const connectDB = require('./config/db')
+connectDB()
+
 // Initialisation d'Express
 const app = express()
 
